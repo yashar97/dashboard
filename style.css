@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.barra-lateral {
+    min-height: 100vh;
+    background: #262434;
+}
+
+.barra-lateral figure {
+    margin: 0;
+    height: 70px;
+    background: #0275DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-lateral figure h2 {
+    color: #fff;
+    font-weight: 300;
+}
+
+.barra-lateral .nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-lateral .nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.barra-lateral .nav a svg {
+    margin-right: 10px;
+}
+
+.barra-lateral .nav a:hover {
+    background: #198754;
+}
+
+/* MAIN */
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    background: #f2f2f2;
+}
+
+/* ENTRADAS */
+
+.entradas {
+    width: 50%;
+    padding: 30px;
+}
+
+.entradas form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.entradas form input {
+    height: 2.5em;
+    padding: 0 10px;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .64);
+    outline: none;
+}
+
+.entradas form textarea {
+    resize: none;
+    height: 400px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .64);
+    padding: 10px;
+}
+
+.entradas .btn-container button {
+    display: block;
+    margin-left: auto;
+    color: #fff;
+    background: #0275D8;
+    border: none;
+    border-radius: 3px;
+    margin-top: 1em;
+    padding: 10px 30px;
+}
+
+.entradas .btn-container button svg {
+    margin-right: 0.5em;
+}
+
+/* COMENTARIOS */
+
+.comentarios {
+    width: 50%;
+    padding: 30px;
+}
+
+.comentarios .estadisticas {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .64);
+}
+
+.comentarios .estadisticas div {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid gray;
+}
+
+.comentarios .estadisticas div h3 {
+    color: #3FAF6B;
+}
+
+.comentarios-title {
+    margin-top: 20px;
+}
+
+.comentarios-jhon {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comentarios-jhon .comentario-header {
+    display: flex;
+    gap: 1em;
+}
+
+.comentarios-jhon .comentario-header a {
+    text-decoration: none;
+}
+
+.comentarios-jhon .comentario-text {
+    width: 80%;
+    margin-left: auto;
+}
+
+.comentarios-jhon .comentario-header img {
+    width: 80px;
+    border-radius: 80px;
+}
+
+.comentarios-jhon .comentrio-buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* MEDIAQUERIES */
+@media screen and (max-width: 900px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-lateral figure {
+        display: none;
+    }
+
+    .barra-lateral {
+        min-height: 70px;
+    }
+
+    .barra-lateral .nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .entradas, .comentarios {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .estadisticas {
+        flex-wrap: wrap;
+    }
+
+    .comentarios {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
